@@ -18,7 +18,7 @@ const useFetch = ({ keyword }) => {
 
   useEffect(() => {
     if (keyword) fetchGifs();
-  }, [keyword]);
+  }, [keyword]);// eslint-disable-line react-hooks/exhaustive-deps
 
   return gifUrl;
 };

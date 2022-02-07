@@ -153,7 +153,7 @@ export const TransactionProvider = ({ children }) => {
   useEffect(() => {
     checkIfWalletIsConnected();
     checkIfTransactionsExist();
-  }, [transactionCount]);
+  }, [transactionCount]);// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <TransactionContext.Provider
