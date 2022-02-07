@@ -4,7 +4,7 @@ import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 
 import { Loader } from ".";
-import { TransactionContext, currentAccount } from "../context/TransactionContext";
+import { TransactionContext } from "../context/TransactionContext";
 import { shortenAddress } from "../utils/shortenAddress";
 
 const companyCommonStyles =
@@ -22,7 +22,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 );
 
 const Welcome = () => {
-  const {connectWallet , currentAccount, formData, setformData, handleChange, sendTransaction,isLoading} = useContext(TransactionContext); 
+  const {connectWallet , currentAccount, formData, handleChange, sendTransaction,isLoading} = useContext(TransactionContext); 
   
   const handleSubmit = (e) => {
     const { addressTo, amount, keyword, message } = formData;
